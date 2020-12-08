@@ -1,5 +1,5 @@
 {
-    "name": "qxplugs/database-manage",
+    "name": "chrisplugs/database-manage",
     "type": "library",
     "description": "EasySwoole Panel's database backup migration plugs",
     "keywords": [
@@ -16,7 +16,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Qxplugs\\DatabaseManage\\" : "src/"
+            "Chrisplugs\\DatabaseManage\\" : "src/"
         }
     }
 }
