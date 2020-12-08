@@ -1,5 +1,5 @@
 {
-    "name": "Qxplugs/DatabaseManage",
+    "name": "qxplugs/database-manage",
     "type": "library",
     "description": "EasySwoole Panel's database backup migration plugs",
     "keywords": [
