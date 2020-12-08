@@ -1,0 +1,22 @@
+{
+    "name": "Qxplugs/DatabaseManage",
+    "type": "library",
+    "description": "EasySwoole Panel's database backup migration plugs",
+    "keywords": [
+        "easyswoole panel",
+        "easyswoole plugs"
+    ],
+    "homepage": "https://www.chrisleesir.com/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "ChrisQx",
+            "email": "386273094@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Qxplugs\\DatabaseManage\\" : "src/"
+        }
+    }
+}
