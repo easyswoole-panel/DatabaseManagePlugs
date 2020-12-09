@@ -4,12 +4,18 @@
  * DatabaseManagePlugs
  * 1.0安装脚本
  * User: ChrisQx
- * Date: 2020/12/08
+ * Date: 2020/12/09
  * Time: 22:54
  */
+namespace Chrisplugs\DatabaseManage\database;
+use Siam\Plugs\common\PlugsHelper;
 
-// 创建表结构
-// 更改表结构
-// 添加数据
-// 移动view文件 都可以
-\EasySwoole\Utility\File::copyFile(EASYSWOOLE_ROOT."/vendor/chrisplugs/database-manage/src/view/index.html",EASYSWOOLE_ROOT."/public/nepadmin/views/chrisplugs/database-manage/index.html");
+class install
+{
+    public function run()
+    {
+        //初始化备份记录表　sima_database_backup_logs
+        return true;
+    }
+}
+(new install())->run();
