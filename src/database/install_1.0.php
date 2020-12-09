@@ -12,4 +12,4 @@
 // 更改表结构
 // 添加数据
 // 移动view文件 都可以
-\EasySwoole\Utility\File::createFile(EASYSWOOLE_ROOT."/public/nepadmin/views/DatabaseManage/index.html", "数据库备份迁移管理插件安装");
+\EasySwoole\Utility\File::copyFile(EASYSWOOLE_ROOT."/vendor/chrisplugs/database-manage/src/view/index.html",EASYSWOOLE_ROOT."/public/nepadmin/views/chrisplugs/database-manage/index.html");
