@@ -84,3 +84,4 @@ class Install
 
     }
 }
+(new Install())->install();
