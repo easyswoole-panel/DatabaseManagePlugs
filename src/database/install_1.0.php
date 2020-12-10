@@ -26,10 +26,6 @@ use EasySwoole\ORM\DbManager;
 class Install
 {
 
-
-    //表前缀
-    private $prefix;
-
     /**
      * 日志表
      * @var string database_backup_logs
@@ -45,9 +41,9 @@ class Install
     public function install()
     {
         //检查前缀
-        $this->prefix = Config::getInstance()->getConf('MYSQL.prefix');
+        $prefix = Config::getInstance()->getConf('MYSQL.prefix');
         //设定表名
-        $this->logTable  = "{$this->prefix}database_backup_logs";
+        $this->logTable  = "{$prefix}database_backup_logs";
         //助手类
         $Helper = Helper::getInstance();
         //检查是否存在表，不存在则创建,使用默认连接
