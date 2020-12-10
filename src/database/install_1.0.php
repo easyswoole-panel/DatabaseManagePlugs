@@ -49,7 +49,7 @@ class Install
         //检查是否存在表，不存在则创建,使用默认连接
         $checkTable = $Helper->checkTable($this->logTable);
             if (!$checkTable){
-                $create = $this->createlogTable();
+                $create = $this->createLogTable();
                 if (!$create){
                     return false;
                 }
@@ -62,7 +62,7 @@ class Install
      * @param string $connection 指定的数据库连接
      * @return mixed
      */
-    protected function createlogTable($connection='default')
+    protected function createLogTable($connection='default')
     {
         //创建表DDL
         $sql = DDLBuilder::table("{$this->logTable}",function (Table $table){
