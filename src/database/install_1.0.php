@@ -7,8 +7,8 @@
  * Date: 2020/12/09
  * Time: 22:54
  */
-namespace DatabaseManage\database;
-use DatabaseManage\common\Helper;
+namespace Chrisplugs\DatabaseManage\database;
+use Chrisplugs\DatabaseManage\common\Helper;
 use EasySwoole\EasySwoole\Config;
 use Siam\Plugs\common\PlugsHelper;
 use EasySwoole\DDL\Blueprint\Table;

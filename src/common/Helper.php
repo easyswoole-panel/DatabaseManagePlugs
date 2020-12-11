@@ -5,7 +5,7 @@
  * Date: 2020/12/9
  * Time: 11:49 下午
  */
-namespace DatabaseManage\common;
+namespace Chrisplugs\DatabaseManage\common;
 use EasySwoole\Mysqli\QueryBuilder;
 use EasySwoole\ORM\DbManager;
 use EasySwoole\Component\Singleton;
