@@ -5,3 +5,9 @@
 
 DatabaseManagePlugs 数据库备份迁移管理插件
 
+当前版本: dev-main
+
+安装:
+
+composer require chrisplugs/database-manage
+
