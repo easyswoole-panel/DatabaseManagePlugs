@@ -5,5 +5,6 @@ return [
     'des'       => '数据库备份迁移管理插件',
     'namespace' => "Chrisplugs\\DatabaseManage\\",
     'version'   => '1.0',
-    'logo'      => ""
+    'logo'      => "",
+    'home_view' => ''
 ];
