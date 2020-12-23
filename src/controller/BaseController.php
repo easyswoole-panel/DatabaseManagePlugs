@@ -5,9 +5,9 @@
  * Time: 12:37 上午
  */
 namespace Chrisplugs\DatabaseManage\controller;
+use Siam\Plugs\controller\BasePlugsController;
 
-use EasySwoole\Http\AbstractInterface\Controller;
-class BaseController extends Controller
+class BaseController extends BasePlugsController
 {
 
 }

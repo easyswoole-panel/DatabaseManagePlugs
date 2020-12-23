@@ -1,7 +1,50 @@
 <div class="layui-card">
     <div class="layui-card-header">数据库备份迁移操作面板</div>
     <div class="layui-card-body">
-        测试安装<br>
-        面板页面
+        <button class="layui-btn layui-btn-radius layui-btn-normal" id="backup-btn">
+            开始备份
+        </button>
+        <table id="log_list"></table>
     </div>
 </div>
+<script>
+    layui.use(['table','layer'], function(){
+        var table = layui.table;
+        var $ = layui.jquery;
+        var layer = layui.layer;
+        table.render({
+            elem: '#log_list',
+            height: 400,
+            url: 'api/chris_plugs/db_manage/get_logs', //数据接口
+            parseData:function (res){
+                return {
+                    "code": res.code,
+                    "msg":res.msg,
+                    "count": res.result.total,
+                    "data":res.result.list
+                }
+            },
+            page: true, //开启分页
+            cols: [[ //表头
+                {field: 'id', title: 'ID', width:100, sort: true, fixed: 'left'},
+                {field: 'name', title: '文件名', width:300,fixed: 'left'},
+                {field: 'backup_at', title: '备份时间', width:300, sort: true,fixed: 'left'}
+            ]]
+        });
+        $('#backup-btn').click(function (){
+            $.ajax({
+                url: 'api/chris_plugs/db_manage/back_up',
+                type:'POST',
+                success:function (res){
+                    layer.msg(res.msg);
+                    setTimeout(function (){
+                        location.reload();
+                    },1500);
+                }
+            })
+
+        });
+
+    });
+
+</script>
