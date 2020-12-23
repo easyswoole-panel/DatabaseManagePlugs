@@ -50,7 +50,7 @@ class BackupController extends BaseController
         if($res === true){
             return $this->writeJson(200, $path,'备份成功');
         }else{
-            return $this->writeJson(200, $path,'备份失败');
+            return $this->writeJson(200, $res,'备份失败');
         }
 
     }

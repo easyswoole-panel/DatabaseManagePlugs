@@ -35,7 +35,8 @@ class Install
             $table->colInt('id',10)->setColumnComment('ID')->setIsAutoIncrement()->setIsPrimaryKey();
             $table->colVarChar('name',50)->setColumnComment('备份文件名')->setIsNotNull();
             $table->colVarChar('path',255)->setColumnComment('文件路径')->setIsNotNull();
-            $table->colInt('backup_at',10)->setIsNotNull()->setColumnComment('创建时间');
+            $table->colDateTime('backup_at')->setIsNotNull()->setColumnComment('创建时间');
+
         });
         PlugsMenuHelper::getInstance()->add('数据库备份迁移管理插件','/chrisplugs/database-manage/index','layui-icon-piechart');
     }

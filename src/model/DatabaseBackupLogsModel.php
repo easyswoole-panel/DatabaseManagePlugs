@@ -19,9 +19,6 @@ class DatabaseBackupLogsModel extends BaseModel
 {
 
     protected $tableName = 'database_backup_logs';
-    protected $autoTimeStamp = true;
-    protected $createTime = 'backup_at';
-    protected $updateTime = 'backup_at';
 
     /**
      * 获取备份记录
@@ -55,7 +52,9 @@ class DatabaseBackupLogsModel extends BaseModel
         }
         try {
             $model = $this->create([
-                'name' => $path['fileName']
+                'name' => $path['fileName'],
+                'path' => $tmpFile,
+                'backup_at'=>date('Y-m-d H:i:s')
             ]);
             $model->save();
         } catch (Exception $e) {
