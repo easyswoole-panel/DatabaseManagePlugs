@@ -38,7 +38,6 @@ class Install
             $table->colDateTime('backup_at')->setIsNotNull()->setColumnComment('创建时间');
 
         });
-        PlugsMenuHelper::getInstance()->add('数据库备份迁移管理插件','/chrisplugs/database-manage/index','layui-icon-piechart');
     }
 }
 //go install
